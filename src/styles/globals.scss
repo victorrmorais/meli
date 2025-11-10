@@ -1,0 +1,6 @@
+@use "./mixins";
+@use "./variables";
+
+body {
+    @include mixins.pages-default;
+}
