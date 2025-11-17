@@ -1,0 +1,77 @@
+@use './../styles/variables.scss';
+@use './../styles/mixins.scss';
+
+.linkProduct {
+    text-decoration: none;
+    color: #000;
+
+    .search_result {
+        @include mixins.pages-container;
+        background-color: #fff;
+        margin: 0 auto;
+        border-radius: 3px;
+
+        .block_result {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            margin: 16px;
+
+            @media (max-width: 480px) {
+                flex-direction: column;
+            }
+
+            .block_image {
+                width: 180px;
+                height: 180px;
+                
+                @media (max-width: 480px) {
+                    width: 100%;
+                    height: auto;
+                }
+
+                figure {
+                    width: 100%;
+                    margin: 0;
+
+                    img {
+                        width: 100%;
+                        border-radius: 4px;
+                    }
+                }
+            }
+
+            .block_txt {
+                display: flex;
+                flex-direction: column;
+                width: 60%;
+                margin: 0 16px;
+
+                @media (max-width: 480px) {
+                    width: 100%;
+                    height: auto;
+                }
+
+                .block_price {
+                    margin-bottom: 32px;
+                    font-size: 24px;
+                }
+
+                .block_description {
+                    font-size: 18px;
+                }
+            }
+
+            .block_txt_right {
+                width: 20%;
+                font-size: 12px;
+                color: variables.$base-background-regular;
+
+                @media (max-width: 480px) {
+                    width: 100%;
+                    text-align: right;
+                }
+            }
+        }
+    }
+}
